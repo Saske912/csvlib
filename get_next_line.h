@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   csvlib.h                                           :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sky <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 22:48:25 by sky               #+#    #+#             */
-/*   Updated: 2020/10/13 22:37:50 by sky              ###   ########.fr       */
+/*   Created: 2020/07/15 23:45:30 by sky               #+#    #+#             */
+/*   Updated: 2020/07/19 01:57:07 by sky              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CSVLIB_H
-# define CSVLIB_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
+# include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <ctype.h>
-# include <fcntl.h>
-# include "get_next_line.h"
 
-int				column_pos(int i, char *str, char simv);
-char			*column_str_value(char *str, char simv);
-int				strcmp_end(char *settings, char *extension);
-char			*ft_strndup(char *str, int n);
-char			**arr_file(char *arg);
+int		get_next_line(int fd, char **line);
+char	*get_join(char *str, int len, char ***sneak, int **eol);
+char	*compare_readed(int	*stat, char **sneak, char ***line);
+char	*s_strdup(char *str);
 
 #endif

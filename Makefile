@@ -5,7 +5,10 @@ HEADER=scvlib.h
 SRC=column_pos.c \
 	column_str_value.c \
 	strcmp_end.c \
-	ft_strndup.c
+	ft_strndup.c \
+	get_next_line.c \
+	get_next_line_utils.c \
+	arr_file.c
 
 OBJ = $(SRC:.c=.o)
 
