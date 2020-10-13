@@ -6,7 +6,7 @@
 /*   By: sky <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 22:48:25 by sky               #+#    #+#             */
-/*   Updated: 2020/10/13 22:37:50 by sky              ###   ########.fr       */
+/*   Updated: 2020/10/13 22:56:02 by sky              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string.h>
 # include <ctype.h>
 # include <fcntl.h>
-# include "get_next_line.h"
+# include "bin/get_next_line.h"
 
 int				column_pos(int i, char *str, char simv);
 char			*column_str_value(char *str, char simv);
