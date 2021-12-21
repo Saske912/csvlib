@@ -19,26 +19,25 @@ char	*column_str_value(char *str, char simv)
 	char	*line;
 
 	i = 0;
-	if (str && simv)
-	{
-		while (str[i] != simv)
-			i++;
-		if (str[i] == simv)
-		{
-			k = 0;
-			i++;
-			while (str[i + k] != simv)
-				k++;
-			if (str[i + k] == simv)
-			{
-				if (!(line = calloc(k + 1, sizeof(char))))
-					return (NULL);
-				line[k] = '\0';
-				while (k--)
-					line[k] = str[i + k];
-				return (line);
-			}
-		}
+	if (!str)
+	    return (NULL);
+    while (str && simv && str[i] && str[i] != simv)
+        i++;
+    if (str[i] == simv)
+    {
+        k = 0;
+        i++;
+        while (str[i + k] && str[i + k] != simv)
+            k++;
+        if (str[i + k] == simv)
+        {
+            if (!(line = calloc(k + 1, sizeof(char))))
+                return (NULL);
+            line[k] = '\0';
+            while (k--)
+                line[k] = str[i + k];
+            return (line);
+        }
 	}
 	return (str);
 }

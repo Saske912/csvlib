@@ -2,14 +2,12 @@ NAME=csvlib.a
 
 HEADER=scvlib.h
 
-BIN=bin/
-
 SRC=column_pos.c \
 	column_str_value.c \
 	strcmp_end.c \
 	ft_strndup.c \
-	$(BIN)get_next_line.c \
-	$(BIN)get_next_line_utils.c \
+	get_next_line.c \
+	get_next_line_utils.c \
 	arr_file.c
 
 OBJ = $(SRC:.c=.o)
